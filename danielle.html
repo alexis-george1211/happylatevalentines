@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danielle's Nook</title>
+    <link rel="stylesheet" href="danielle.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="white tulip.jpg" alt="Profile Picture">
+        <h1>Dearest Danielle,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Dan!</h2>
+                <p>I hope nothing for you but happiness and contentment.</p>
+                <p>Allow yourself to continue chasing the moon, hurt your neck looking at the stars,</p>
+                <p>to laugh louder than everyone else in the room.</p>
+                <p>Know that love creeps up on your cheeks, your perfume, the glow of the morning light</p>
+                <p>and the bow of the setting sun.</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>Anything with you is nothing short of amusing.</p>
+            <p>I hope you know that the gleam of the moon</p>
+            <p>is from the reflection of the glimmer from your eyes.</p>
+            <p>All my love,<br>Alexis</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="IMG_4600.JPG" alt="Globe"></div>
+                <div class="card-back"><p>close yarn? HAHAH</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="IMG_1404.jpg" alt="Tree"></div>
+                <div class="card-back"><p>fave candid JHS pic!</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="IMG_6564.jpg" alt="Coin"></div>
+                <div class="card-back"><p>merry christmas and a happy new year</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="IMG_6707.jpg" alt="Sunset"></div>
+                <div class="card-back"><p>inseparable duo</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="IMG_6954.jpg" alt="Flower"></div>
+                <div class="card-back"><p>here's to more concert pics</p></div>
+            </div></div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>

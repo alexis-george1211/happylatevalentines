@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayesa's Nook</title>
+    <link rel="stylesheet" href="ayesa.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="pink tulip.jpg" alt="Profile Picture">
+        <h1>Dearest Yeng,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Yeng!</h2>
+                <p>Thanks for the unexpected friendship.</p>
+                <p>Somehow, I wished that I never stopped my PHIKOMA lessons.</p>
+                <p>Maybe I could've known you then.</p>
+                <p>Good thing life gets around to see us in the same class.</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>I'll always have with me</p>
+            <p>the girl who makes me hide my face</p>
+            <p>Cause of a very dirty joke</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="yeng2.jpg" alt="Globe"></div>
+                <div class="card-back"><p>happy birthday meg</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="yeng1.JPG" alt="Tree"></div>
+                <div class="card-back"><p>kita ko tomboy</p></div>
+            </div></div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>

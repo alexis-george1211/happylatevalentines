@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryle's Nook</title>
+    <link rel="stylesheet" href="bryle.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="white tulip.jpg" alt="Profile Picture">
+        <h1>Dearest Bryle,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Bryle!</h2>
+                <p>I'll always treasure the friend who joins my expeditions.</p>
+                <p>Hope the next time we're riding on is an airplane out this country.</p>
+                <p>and I hope we'll never run out of things to unfold;</p>
+                <p>in songs, in messages, in ordinaries.</p>
+                <p>Thanks for the friendship.</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>You're the air out of my lungs</p>
+            <p>that hurts my stomach when you're around</p>
+            <p>If the world becomes dull,</p>   
+            <p>know that you have died.</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="bryle1.jpg" alt="Globe"></div>
+                <div class="card-back"><p>nature trip again soon</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="bryle2.jpg" alt="Tree"></div>
+                <div class="card-back"><p>diin tani?</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="bryle4.jpg" alt="Coin"></div>
+                <div class="card-back"><p>diba biskan diin lang ga yap session</p></div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>
