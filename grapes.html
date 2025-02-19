@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grapes' Nook</title>
+    <link rel="stylesheet" href="grapes.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="lily of the valley.jpg" alt="Profile Picture">
+        <h1>Dearest Grapes,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Grapes!</h2>
+                <p>Thanks for making me see the world in different perspectives.</p>
+                <p>I hope for your worries to disappear,</p>
+                <p>that the next heavy thing you'll be carrying</p>
+                <p>will be the rocks of our mountain adventures.</p>
+                <p>Your past is proud of you for how far you've come.</p>
+                <p>So am I.</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>Childhood memories don't creep out like nightmares.</p>
+            <p>but rather reminders that we are allowed to feel happiness</p>
+            <p>But to be drowned in reminiscence is the poison of all gleam and joy.</p>
+            <p>Never forget to laugh like a child.</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="grapes1.JPG" alt="Globe"></div>
+                <div class="card-back"><p>more achievements soon!</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="grapes3.jpg" alt="Tree"></div>
+                <div class="card-back"><p>when next impromptu lagaw?</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="grapes4.JPG" alt="Coin"></div>
+                <div class="card-back"><p>rockstar sya</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="grapes5.jpg" alt="Sunset"></div>
+                <div class="card-back"><p>HAHHAHSHASHASAH</p></div>
+            </div></div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>
