@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atat's Nook</title>
+    <link rel="stylesheet" href="atat.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="sunflowers-removebg-preview.png" alt="Profile Picture">
+        <h1>Dearest Atat,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Tat!</h2>
+                <p>The sun rises for you</p>
+                <p>To share a bit of your warmth and shine.</p>
+                <p>No, it is not the other way around.</p>
+                <p>For it is you who always brightens up my day.</p>
+                <p>I wish to never see that light fade from you.</p>
+                <p>I am forever grateful to be alive and share a life with you.</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>When the sun is no where to be found,</p>
+            <p>sunflowers look at you profound.</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="atat1.jpg" alt="Globe"></div>
+                <div class="card-back"><p>love this moment</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="atat2.JPG" alt="Tree"></div>
+                <div class="card-back"><p>meow!</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="atat3.jpg" alt="Coin"></div>
+                <div class="card-back"><p>iloilo trip again soon pls</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="atat4.jpg" alt="Sunset"></div>
+                <div class="card-back"><p>rawr</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="atat5.jpg" alt="Flower"></div>
+                <div class="card-back"><p>shawty you don't need no make up</p></div>
+            </div></div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>
