@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart's Nook</title>
+    <link rel="stylesheet" href="heart.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="pink and white tulip.jpg" alt="Profile Picture">
+        <h1>Dearest Heart,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Heart!</h2>
+                <p>Even years couldn't count how long have we been together;</p>
+                <p>yet still feels like I have yet to know you</p>
+                <p>I've watched tidals grow and low, autumn leaves and spring welcomes</p>
+                <p>Simply nothing ever changed.</p>
+                <p>I'm forever grateful growing old with you!</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>Who knew how fast our past would remind us</p>
+            <p>the moment we shared beers instead of toys?</p>
+            <p>I hope for the never ending surprises that fills</p>
+            <p>our overflowing album of memories.</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="heart3.JPG" alt="Globe"></div>
+                <div class="card-back"><p>sisters forevs</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="heart4.jpg" alt="Tree"></div>
+                <div class="card-back"><p>ang una nga palahubog</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="heart5.jpg" alt="Coin"></div>
+                <div class="card-back"><p>naks</p></div>
+            </div></div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>
