@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane's Nook</title>
+    <link rel="stylesheet" href="ryza.css">
+</head>
+<body>
+    <header class="profile-header">
+       
+    </header>
+    
+    <nav class="navbar">
+        <img src="pink and white tulip.jpg" alt="Profile Picture">
+        <h1>Dearest Shane,</h1>
+        <p>Happy Valentine's Day!</p>
+        <p>Enjoy your little digital nook. Click the photos, click the flowers, enjoy!</p>
+
+        <div class="navbar-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('letter')">Flowers</button>
+        <button onclick="showSection('pics')">Pics</button>
+    </nav>
+    
+    <section id="home" class="content-section active">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Hi, Shane!</h2>
+                <p>Even distance couldn't overcome the friendship</p>
+                <p>that we've made.</p>
+                <p>Anything that pulls us apart,</p>
+                <p>will always be an unsuccessful one.</p>
+                <p>We'll always find our way back.</p>
+                <p>All my love,</p>
+                <p>Alexis</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="letter" class="content-section">
+        <div class="letter-container" onclick="expandLetter()">
+            <p>There is a stillness in silence of our life</p>
+            <p>that I love most</p>
+            <p>No words could recreate your presence</p>
+            <p>that you gifted me in my life</p>
+        </div>
+    </section>
+    
+    <section id="pics" class="content-section">
+        <h2>Our Pictures</h2>
+        <div class="grid">
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="ryza1.JPG" alt="Globe"></div>
+                <div class="card-back"><p>walking walking</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="ryza2.JPG" alt="Tree"></div>
+                <div class="card-back"><p>mga agi</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="ryza3.jpg" alt="Coin"></div>
+                <div class="card-back"><p>scout saluteee!</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="ryza4.jpg" alt="Sunset"></div>
+                <div class="card-back"><p>HAHSHASHAHA</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-front"><img src="ryza5.jpg" alt="Flower"></div>
+                <div class="card-back"><p>missing these times</p></div>
+            </div></div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>

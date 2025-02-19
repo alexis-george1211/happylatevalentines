@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello, my Valentine!</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background Styles */
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: url('valentine-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Sign-up Section */
+    .signup-container {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .signup-container h1 {
+      font-size: 36px;
+      color: #e91e63;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .signup-container input {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #e91e63;
+      font-size: 18px;
+      outline: none;
+    }
+
+    .signup-container input:focus {
+      border-color: #f06292;
+    }
+
+    .signup-container button {
+      background-color: #e91e63;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .signup-container button:hover {
+      background-color: #f06292;
+    }
+
+    /* User Profile Pages */
+    .user-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+      color: #333;
+      height: 100vh;
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    .user-page h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #e91e63;
+    }
+
+    /* Valentine Hearts Styling */
+    .heart {
+      font-size: 100px;
+      color: #e91e63;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .signup-container {
+        padding: 30px;
+      }
+
+      .signup-container h1 {
+        font-size: 28px;
+        max-width: 500px;
+      }
+
+      .signup-container input {
+        font-size: 16px;
+      }
+
+      .signup-container button {
+        font-size: 16px;
+      }
+
+      .heart {
+        font-size: 80px;
+      }
+
+      .user-page h1 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .signup-container {
+        padding: 20px;
+      }
+
+      .signup-container h1 {
+        font-size: 24px;
+        max-width: 500px;
+      }
+
+      .signup-container input {
+        font-size: 14px;
+      }
+
+      .signup-container button {
+        font-size: 14px;
+      }
+
+      .heart {
+        font-size: 60px;
+      }
+
+      .user-page h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="signup-container">
+    <h1>Are you my Valentine?</h1>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="redirectUser()">Let's Find Out!</button>
+  </div>
+
+  <script>
+   
+    const validUsernames = ['Danielle', 'danielle', 'Atat', 'atat', 'heart', 'Heart', 'ryza', 'Ryza', 'emem', 'Emem', 'grapes', 'Grapes',  'bryle', 'Bryle', 'ayesa', 'Ayesa'];
+
+    
+    function redirectUser() {
+      const username = document.getElementById('username').value.trim();
+
+      if (validUsernames.includes(username)) {
+        window.location.href = `${username.toLowerCase()}.html`; // Redirect to the username's page
+      } else {
+        alert("Username not recognized. Please enter a valid username.");
+      }
+    }
+  </script>
+
+</body>
+</html>
